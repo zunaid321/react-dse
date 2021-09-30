@@ -13,7 +13,7 @@ function App() {
   ]
   
   useEffect(()=>{
-    fetch("https://wandering-feather-3ffb.zunaid321.workers.dev/?http://dsexchange.herokuapp.com/api/latest_price")
+    fetch("https://heroku-dse-api.herokuapp.com/api/latest_price")
     .then(resp=>resp.json())
     .then(resp=>{
       console.log(resp.stocks)
