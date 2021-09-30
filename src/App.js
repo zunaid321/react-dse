@@ -22,15 +22,30 @@ function App() {
  
 
   return (
-    <div className="App">
-      <h1 align="center">DSE</h1>
-      <h4 align='center'>Made By Zunaid Amin Enan</h4>
-      <MaterialTable
-        title="Company List"
-        data={data}
-        columns={columns}
-      />
-    </div>
+        <table className="content-table">
+          <thead>
+            <tr>
+              <th>TRADING_CODE</th>
+              <th>LTP</th>
+              <th>HIGH</th>
+              <th>LOW</th>
+            </tr>
+          </thead>
+          <tbody>
+              {data.map(item => {
+                return(
+                  <>
+                  <tr>
+                    <td>{item.TRADING_CODE}</td>
+                    <td>{item.LTP}</td>
+                    <td>{item.HIGH}</td>
+                    <td>{item.LOW}</td>
+                    </tr>
+                  </>
+                )
+              })}
+          </tbody>
+        </table>
   );
 }
 
